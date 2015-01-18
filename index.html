@@ -7,11 +7,27 @@
 	<title>Chase VanToll</title>
 
 	<style>
-		body { background: red; }
-		h1 { color: white; }
+		body {
+			background: red;
+			margin: 0;
+		}
+		@-webkit-keyframes spin {
+			from { -webkit-transform: rotate(0deg); }
+			to { -webkit-transform: rotate(360deg); }
+		}
+		@keyframes spin {
+			from { transform:rotate(0deg); }
+			to { transform:rotate(360deg); }
+		}
+		img {
+			max-width: 100%;
+			display: block;
+			-webkit-animation: spin 4s infinite linear;
+			animation: spin 4s infinite linear;
+		}
 	</style>
 </head>
 <body>
-	<h1>Chase!</h1>
+	<img src="toothless.jpg">
 </body>
 </html>
